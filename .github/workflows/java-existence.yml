@@ -46,4 +46,4 @@ jobs:
           
       - name: Check ANT
         run: |
-          ant --version
+          ant -version
