@@ -1,0 +1,31 @@
+name: 04-Installing different tools cross-platform
+
+on:
+    push:
+        branch: [master, main]
+
+jobs:
+    linux:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install python on ubuntu
+              run: |
+                  sudo apt-get update -y
+                  sudo apt-get install python -y
+                  python -V
+
+    windows:
+        runs-on: windows-latest
+        steps:
+            - name: Install python on windows
+              run: |
+                  choco install python
+                  python -V
+
+    mac-os:
+        runs-on: macos-latest
+        steps:
+            - name: Install python on macos
+              run: |
+                  brew install python
+                  python -V
