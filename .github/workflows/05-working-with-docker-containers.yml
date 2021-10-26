@@ -1,0 +1,22 @@
+name: 05-Working with Docker containers
+
+on: push
+
+jobs:
+    linux:
+        strategy:
+            matrix:
+                container:
+                    - "node:carbon"
+                    - "node:argon"
+                    - "node:12.0"
+                    - "node:13.0"
+
+        runs-on: "ubuntu:latest"
+        container: ${{ matrix.container }}
+
+        steps:
+            - run: |
+                  id
+                  uname -a
+                  cat /etc/*release
