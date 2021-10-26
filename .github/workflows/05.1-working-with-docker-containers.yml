@@ -14,4 +14,6 @@ jobs:
                   uname -a
                   ls -la 
                   pwd
-                  netstat -plnt
+                  cd /app/
+                  ls -la
+                  node -v

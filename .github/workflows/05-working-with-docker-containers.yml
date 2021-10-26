@@ -18,5 +18,6 @@ jobs:
         steps:
             - run: |
                   id
+                  node -v
                   uname -a
                   cat /etc/*release
