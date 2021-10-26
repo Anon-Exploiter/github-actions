@@ -1,0 +1,17 @@
+name: 05.1-Working with single Docker container
+
+on: push
+
+jobs:
+    linux:
+        runs-on: ubuntu:latest
+        container: "appsecco/dvna:sqlite"
+
+        steps:
+            - name: Start the DVNA container and check if it did
+              run: |
+                  id
+                  uname -a
+                  ls -la 
+                  pwd
+                  netstat -plnt
