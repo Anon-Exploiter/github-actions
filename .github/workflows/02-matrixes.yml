@@ -1,7 +1,8 @@
 name: Matrix
 
 on:
-    push: main
+    push:
+        branches: [master, main]
 
 jobs:
     build:
