@@ -1,0 +1,24 @@
+name: Matrix
+
+on:
+    push: [master, main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                python-versions: [2.7, 3.9]
+
+        steps:
+            - name: Apt Update
+              run: sudo apt-get update -y
+
+            - name: Install python version
+              run: sudo apt-get install python-${{ matrix.python-versions }}
+
+            - name: Run the script with the specific version
+              run: |
+                  python -V
+                  python test.py
