@@ -1,1 +1,1 @@
-print("Test release drafter worflow")
+print("Test workflows")
