@@ -1,4 +1,4 @@
-name: Matrix
+name: 02-Matrix
 
 on:
     push:

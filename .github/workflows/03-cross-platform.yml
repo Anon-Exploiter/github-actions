@@ -1,4 +1,4 @@
-name: Running the code cross-platform with multiple python versions
+name: 03-Running the code cross-platform with multiple python versions
 
 on:
     push:
