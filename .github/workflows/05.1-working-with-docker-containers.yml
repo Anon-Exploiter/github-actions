@@ -4,7 +4,7 @@ on: push
 
 jobs:
     linux:
-        runs-on: ubuntu:latest
+        runs-on: ubuntu-latest
         container: "appsecco/dvna:sqlite"
 
         steps:
