@@ -12,6 +12,9 @@ jobs:
                 python-versions: [2.7, 3.9]
 
         steps:
+            - name: Checkout source
+              uses: actions/checkout@v1
+
             - name: Apt Update
               run: sudo apt-get update -y
 
