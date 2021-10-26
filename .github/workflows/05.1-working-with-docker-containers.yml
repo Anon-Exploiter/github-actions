@@ -17,3 +17,8 @@ jobs:
                   cd /app/
                   ls -la
                   node -v
+
+            - name: ZAP Scan
+              uses: zaproxy/action-full-scan@v0.1.0
+              with:
+                  target: "http://127.0.0.1:9090"
